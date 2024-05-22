@@ -1,12 +1,22 @@
+import everseenLogo from '../../assets/everseen_limited_logo.jpg';
+import fmiLogo from '../../assets/fmi_logo.jpg';
+import initDLogo from '../../assets/initd_logo.jpg';
+import propelerLogo from '../../assets/propeler_logo.jpg';
+import { Header } from '../../common/experience/header';
+
 export const Experience = () => {
     return (
-        <div id="experience" className="min-h-svh relative">
+        <div id="experience" className="relative min-h-svh">
             <h2 className="text-2xl tracking-tight">Work Experience</h2>
-            <div className="px-6 py-4 border-slate-300 border rounded">
-                <h3 className="text-xl tracking-tight">
-                    Everseen – Front-end Developer Belgrade, Serbia, JANUARY
-                    2021 – PRESENT
-                </h3>
+            <div className="*:first-letter:first-line: rounded border border-slate-300 bg-zinc-900 px-6 py-4">
+                <Header
+                    location="Belgrade, Serbia"
+                    link="https://everseen.com/"
+                    alt="everseen-logo"
+                    logoUrl={everseenLogo}
+                    title="Everseen Limited– Front-end Developer"
+                    date="January 2021 – Present"
+                />
                 <p className="pl-4">
                     Design, build, and maintenance of the vision annotation
                     platform with multiple front-end projects using the latest
@@ -30,10 +40,14 @@ export const Experience = () => {
                     deployment activities, ensuring the timely delivery of
                     software solutions utilizing DevOps methodology.
                 </p>
-                <h3 className="text-xl tracking-tight">
-                    Init.d – Front-end Developer – Project-based Belgrade,
-                    Serbia, MAY 2023 – DECEMBER 2023
-                </h3>
+                <Header
+                    location="Belgrade, Serbia"
+                    link="/"
+                    alt="initd-logo"
+                    logoUrl={initDLogo}
+                    title="Init.d – Front-end Developer"
+                    date="May 2021 – August 2021"
+                />
                 <p className="pl-4">
                     • Contributed to developing of the Admin Dashboard mobile
                     application for monitoring and tracking items and employee
@@ -44,10 +58,14 @@ export const Experience = () => {
                     features. Participated in standups, planning, and
                     application flow designing.
                 </p>
-                <h3 className="text-xl tracking-tight">
-                    Propeler Centar – Web Developer, Internship Belgrade,
-                    Serbia, OCTOBER 2020 - JANUARY 2021
-                </h3>
+                <Header
+                    location="Belgrade, Serbia"
+                    link="https://everseen.com/"
+                    alt="propeler-logo"
+                    logoUrl={propelerLogo}
+                    title="Propeler Centar – Web Developer, Internship"
+                    date="October 2020 - January 2021"
+                />
                 <p className="pl-4">
                     • Designed, published, and deployed WordPress websites with
                     a focus on user-friendly interfaces and seamless
@@ -55,10 +73,15 @@ export const Experience = () => {
                     and designers. • Observed fresh React project and
                     documentation.
                 </p>
-                <h3 className="text-xl tracking-tight">
-                    Youth with disabilities forum – “IT Prekvalifikacija” –
-                    Assistant Belgrade, Serbia, OCTOBER 2019 - JULY 2020
-                </h3>
+                <Header
+                    location="Belgrade, Serbia"
+                    link="https://everseen.com/"
+                    alt="propeler-logo"
+                    logoUrl={fmiLogo}
+                    title="Youth with disabilities forum – “IT Prekvalifikacija” –
+                    Assistant Belgrade, Serbia"
+                    date="October 2019 - July 2020"
+                />
                 <p className="pl-4">
                     Assistant of the front-end development course for people
                     with disabilities at Belgrade Faculty of Organizational
