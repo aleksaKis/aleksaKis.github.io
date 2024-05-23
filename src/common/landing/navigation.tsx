@@ -10,6 +10,7 @@ export function Navigation() {
                 transition={{ delay: 1.1, duration: 2.5 }}
                 exit={{ opacity: 0 }}
             >
+                <a href="#about">About</a> |{' '}
                 <a href="#experience">Work Experience</a>
             </motion.nav>
             <motion.div

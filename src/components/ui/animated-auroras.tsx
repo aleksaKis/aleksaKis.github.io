@@ -8,7 +8,7 @@ export function AnimatedAuroras({
     scrollYProgress: MotionValue<number>;
 }) {
     return (
-        <div className="sm:opacity-100 opacity-40">
+        <div className="pointer-events-none">
             <Aurora
                 scrollYProgress={scrollYProgress}
                 borderColor="#72FCF9"

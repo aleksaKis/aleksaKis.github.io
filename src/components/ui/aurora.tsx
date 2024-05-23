@@ -43,8 +43,8 @@ export const Aurora = ({
              rounded-full top-1/2 absolute top left-1/2 overflow-hidden"
             >
                 <motion.div
-                    animate={{ scale: 1 }}
-                    initial={{ scale: 0 }}
+                    animate={{ scale: 1, opacity: 0.8 }}
+                    initial={{ scale: 0, opacity: 1 }}
                     transition={{
                         yoyo: Infinity,
                         duration: random(2, 5),
