@@ -11,6 +11,7 @@ function App() {
     const mainRef = useRef<HTMLDivElement>(null);
 
     const { scrollYProgress } = useScroll({ container: mainRef });
+
     return (
         <main className="overflow-x-hidden relative">
             <div

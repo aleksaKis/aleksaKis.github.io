@@ -1,3 +1,5 @@
+import { LocationIcon } from '../../components/icons/location';
+
 export const Header = ({
     logoUrl,
     alt,
@@ -13,7 +15,7 @@ export const Header = ({
     location: string;
     date: string;
 }) => (
-    <h3 className="text-xl tracking-tight">
+    <div>
         <div className="flex items-center gap-1">
             <a href={link} target="_blank" rel="noreferrer">
                 <img
@@ -22,9 +24,16 @@ export const Header = ({
                     src={logoUrl}
                 />
             </a>
-            <span>{title}</span>
-            <span>{location}</span>
+            <h3 className="text-xl tracking-tight">{title}</h3>
         </div>
-        <span className="bg-slate-300 text-slate-900 rounded px-1">{date}</span>
-    </h3>
+        <div className="flex justify-between flex-1">
+            <span className="flex items-center">
+                <LocationIcon />
+                {location}
+            </span>
+            <span className=" bg-cyan-300 border-cyan-300 border shadow text-stone-950 rounded px-2 flex items-center">
+                {date}
+            </span>
+        </div>
+    </div>
 );

@@ -31,7 +31,7 @@ export const Aurora = ({
                     repeatType:
                         random(0, 1).toFixed() === '0' ? 'reverse' : 'loop',
                     yoyo: Infinity,
-                    duration: random(70, 90),
+                    duration: random(50, 70),
                     repeat: Infinity,
                 }}
                 style={{
