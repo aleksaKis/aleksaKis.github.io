@@ -3,6 +3,7 @@ import { useRef } from 'react';
 
 import { About } from './components/containers/about';
 import { Experience } from './components/containers/experience';
+import { Footer } from './components/containers/footer';
 import { Landing } from './components/containers/landing';
 import { AnimatedAuroras } from './components/ui/animated-auroras';
 import { SparklesCore } from './components/ui/sarkles';
@@ -13,7 +14,7 @@ function App() {
     const { scrollYProgress } = useScroll({ container: mainRef });
 
     return (
-        <main className="overflow-x-hidden relative">
+        <main className="overflow-hidden relative">
             <div
                 id="content"
                 ref={mainRef}
@@ -34,6 +35,7 @@ function App() {
                     <Landing />
                     <About />
                     <Experience />
+                    <Footer />
                 </div>
             </div>
         </main>

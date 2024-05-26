@@ -1,8 +1,8 @@
 export const About = () => {
     return (
         <div id="about" className="min-h-svh flex justify-center items-center">
-            <div className=" bg-zinc-700/60 border border-zinc-600 shadow rounded-full z-10 w-[90vw] h-[90vw] flex items-center p-3 max-h-[550px] max-w-[550px]">
-                <p className="mx-auto text-center sm:text-base text-sm p-2">
+            <div className="bg-gradient-to-r from-purple-500 to-purple-900 border-zinc-100 shadow rounded-full z-10  flex items-center p-3 w-[90svw] h-[90svw] max-h-[550px] max-w-[550px] overflow-hidden">
+                <p className="mx-auto text-center sm:text-base text-sm p-2 px-10">
                     Hi, I&apos;am a Front-end Engineer with expertise in React,
                     Angular, and JavaScript/TypeScript, that excels in crafting
                     seamless user experiences and robust web solutions.

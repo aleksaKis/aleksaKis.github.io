@@ -2,6 +2,19 @@ import { MotionValue } from 'framer-motion';
 
 import { Aurora } from './aurora';
 
+const colors = [
+    '#72FCF9',
+    '#727BFC',
+    '#F8FC92',
+    '#8332AC',
+    '#FFCAD4',
+    '#FF9A8B',
+    '#FF00FF',
+    '#00FFFF',
+    '#FFD700',
+    '#7FFF00',
+];
+
 export function AnimatedAuroras({
     scrollYProgress,
 }: {
@@ -9,31 +22,14 @@ export function AnimatedAuroras({
 }) {
     return (
         <div className="pointer-events-none">
-            <Aurora
-                scrollYProgress={scrollYProgress}
-                borderColor="#72FCF9"
-                size={230}
-            />
-            <Aurora
-                scrollYProgress={scrollYProgress}
-                borderColor="#727BFC"
-                size={300}
-            />
-            <Aurora
-                scrollYProgress={scrollYProgress}
-                borderColor="#F8FC92"
-                size={360}
-            />
-            <Aurora
-                scrollYProgress={scrollYProgress}
-                borderColor="#8332AC"
-                size={430}
-            />
-            <Aurora
-                scrollYProgress={scrollYProgress}
-                borderColor="#FFCAD4"
-                size={500}
-            />
+            {colors.map((color, index) => (
+                <Aurora
+                    key={index}
+                    scrollYProgress={scrollYProgress}
+                    borderColor={color}
+                    size={230 + index * 70}
+                />
+            ))}
         </div>
     );
 }

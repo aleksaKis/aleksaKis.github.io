@@ -1,5 +1,3 @@
-import { MotionValue, motion } from 'framer-motion';
-
 import { Navigation } from '../../common/landing/navigation';
 import { Social } from '../../common/landing/social';
 import { FlipWords } from '../ui/flip-words';
