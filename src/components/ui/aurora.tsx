@@ -16,14 +16,14 @@ export const Aurora = ({
             stiffness: random(100, 200),
         }),
         [0, 1],
-        [1, 0.2],
+        [1, 2.5],
         { clamp: true },
     );
 
     const rotate = useTransform(scrollYProgress, [0, 1], [0, 90]);
 
     return (
-        <div className="h-screen w-screen absolute">
+        <div className="max-h-screen max-w-screen h-screen w-screen absolute overflow-hidden">
             <motion.div
                 animate={{ rotate: random(0, 360) }}
                 initial={{ rotate: random(0, 360) }}
@@ -31,7 +31,7 @@ export const Aurora = ({
                     repeatType:
                         random(0, 1).toFixed() === '0' ? 'reverse' : 'loop',
                     yoyo: Infinity,
-                    duration: random(70, 90),
+                    duration: random(50, 70),
                     repeat: Infinity,
                 }}
                 style={{
@@ -39,12 +39,11 @@ export const Aurora = ({
                     translateY: '-50%',
                     scale,
                 }}
-                className="border-dotted blur-sm
-             rounded-full top-1/2 absolute top left-1/2 overflow-hidden"
+                className="border-dotted blur-sm rounded-full top-1/2 absolute top left-1/2 overflow-hidden"
             >
                 <motion.div
-                    animate={{ scale: 1 }}
-                    initial={{ scale: 0 }}
+                    animate={{ scale: 1, opacity: 0.8 }}
+                    initial={{ scale: 0, opacity: 1 }}
                     transition={{
                         yoyo: Infinity,
                         duration: random(2, 5),
