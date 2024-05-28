@@ -5,6 +5,7 @@ import { About } from './components/containers/about';
 import { Experience } from './components/containers/experience';
 import { Footer } from './components/containers/footer';
 import { Landing } from './components/containers/landing';
+import { Skills } from './components/containers/skills';
 import { AnimatedAuroras } from './components/ui/animated-auroras';
 import { SparklesCore } from './components/ui/sarkles';
 
@@ -33,7 +34,8 @@ function App() {
                 <AnimatedAuroras scrollYProgress={scrollYProgress} />
                 <div className="max-w-[1280px] mx-auto px-6 z-10">
                     <Landing />
-                    <About />
+                    <About yScroll={scrollYProgress} />
+                    <Skills />
                     <Experience />
                     <Footer />
                 </div>

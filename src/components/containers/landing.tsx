@@ -1,14 +1,5 @@
 import { Navigation } from '../../common/landing/navigation';
 import { Social } from '../../common/landing/social';
-import { FlipWords } from '../ui/flip-words';
-
-const words = [
-    'beautiful',
-    'functional',
-    'responsive',
-    'accessible',
-    'intuitive',
-];
 
 export const Landing = () => (
     <div className="relative min-h-svh flex mx-4 my-2 place-content-center flex-col justify-evenly sm:justify-center gap-2">
@@ -22,13 +13,7 @@ export const Landing = () => (
         </div>
         <div className="flex justify-between items-center flex-wrap">
             <Social />
-            <span className="text-xl self-end overflow-hidden max-w-[220px] text-neutral-100">
-                I create
-                <FlipWords words={words} />
-                UI.
-            </span>
         </div>
-
         <Navigation />
     </div>
 );

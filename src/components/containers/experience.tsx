@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+
 import everseenLogo from '../../assets/everseen_limited_logo.jpg';
 import fmiLogo from '../../assets/fmi_logo.jpg';
 import initDLogo from '../../assets/initd_logo.jpg';
@@ -129,8 +132,12 @@ const ExperienceItem = ({
     endDate,
     children,
 }: ExperienceItemProps) => {
+    const [show, setShow] = useState(window.innerWidth > 640 ? true : false);
     return (
-        <div className="flex relative">
+        <div
+            className="flex relative cursor-pointer"
+            onClick={() => setShow(!show)}
+        >
             <div className="text-end absolute right-full text-zinc-300">
                 <span className="text-xs">{endDate}</span>
             </div>
@@ -150,7 +157,17 @@ const ExperienceItem = ({
                         title={title}
                         date={startDate}
                     />
-                    <span className="hidden sm:block">{children}</span>
+                    <motion.span
+                        style={{
+                            display: 'block',
+                            overflow: 'hidden',
+                        }}
+                        animate={{ height: show ? 'auto' : 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="text-sm"
+                    >
+                        {children}
+                    </motion.span>
                 </div>
             </div>
         </div>
