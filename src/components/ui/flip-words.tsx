@@ -1,11 +1,7 @@
-'use client';
-
 import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { cn } from '../../utils/cn';
-
-let interval: ReturnType<typeof setInterval>;
 
 export const FlipWords = ({
     words,
@@ -17,11 +13,12 @@ export const FlipWords = ({
     className?: string;
 }) => {
     const [currentWord, setCurrentWord] = useState(words[0]);
+    const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
     useEffect(() => {
         const startAnimation = () => {
             let i = 0;
-            interval = setInterval(() => {
+            intervalRef.current = setInterval(() => {
                 i++;
                 if (i === words.length) {
                     i = 0;
@@ -33,7 +30,7 @@ export const FlipWords = ({
         startAnimation();
 
         return () => {
-            clearInterval(interval);
+            intervalRef.current && clearInterval(intervalRef.current);
         };
     }, []);
 
