@@ -2,7 +2,6 @@ import { MotionValue, motion, useTransform } from 'framer-motion';
 
 export const About = ({ yScroll }: { yScroll: MotionValue<number> }) => {
     const scale = useTransform(yScroll, [0, 0.3], [0.3, 0.95]);
-    console.log(yScroll);
 
     return (
         <div
