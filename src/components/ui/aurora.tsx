@@ -1,6 +1,8 @@
 import { MotionValue, motion, useSpring, useTransform } from 'framer-motion';
 import random from 'lodash/random';
 
+const MAX_ROTATION = 360;
+
 export const Aurora = ({
     scrollYProgress,
     size,
@@ -16,24 +18,28 @@ export const Aurora = ({
             stiffness: random(100, 200),
         }),
         [0, 0.3],
-        [1, 2.5],
+        [1, 2],
         { clamp: true },
     );
 
     const rotate = useTransform(scrollYProgress, [0, 0.3], [0, 100], {
         clamp: true,
     });
+    const containerRotation = random(0, MAX_ROTATION);
 
     return (
         <div className="max-h-screen max-w-screen h-screen w-screen fixed overflow-hidden">
             <motion.div
-                animate={{ rotate: random(0, 360) }}
-                initial={{ rotate: random(0, 360) }}
+                animate={{ rotate: containerRotation }}
+                initial={{
+                    rotate: containerRotation + MAX_ROTATION,
+                }}
                 transition={{
-                    repeatType:
-                        random(0, 1).toFixed() === '0' ? 'reverse' : 'loop',
-                    yoyo: Infinity,
-                    duration: random(30, 50),
+                    repeatType: 'loop',
+                    ease: 'linear',
+                    loop: Infinity,
+                    duration: random(30, 40),
+                    stiffness: 200,
                     repeat: Infinity,
                 }}
                 style={{
