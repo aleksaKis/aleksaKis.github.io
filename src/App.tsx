@@ -31,6 +31,7 @@ function App() {
                         particleColor="#FFFFFF"
                     />
                 </div>
+
                 <AnimatedAuroras scrollYProgress={scrollYProgress} />
                 <div className="max-w-[1280px] mx-auto px-6 z-10">
                     <Landing />

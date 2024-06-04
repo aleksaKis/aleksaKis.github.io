@@ -8,7 +8,7 @@ export const About = ({ yScroll }: { yScroll: MotionValue<number> }) => {
             <motion.div
                 style={{ scale }}
                 className="bg-gradient-to-r from-purple-500 to-purple-900 border-zinc-100 shadow rounded-full z-10 
-                flex items-center p-3 overflow-hidden w-[90svw] h-[90svw] max-h-[550px] max-w-[550px] sticky top-1/4 transform"
+                flex items-center p-3 overflow-hidden w-[90dsw] h-[90svw] max-h-[550px] max-w-[550px] sticky top-1/4 transform"
             >
                 <p className="mx-auto text-center sm:text-base text-sm p-2 px-10">
                     Hi, I&apos;am a Front-end Engineer with expertise in React,
