@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 
 import everseenLogo from '../../assets/everseen_limited_logo.jpg';
 import fmiLogo from '../../assets/fmi_logo.jpg';
@@ -119,7 +119,7 @@ type ExperienceItemProps = {
     title: string;
     startDate: string;
     endDate: string;
-    children: React.ReactNode;
+    children: ReactNode;
 };
 
 const ExperienceItem = ({

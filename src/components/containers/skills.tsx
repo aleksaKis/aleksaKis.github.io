@@ -13,7 +13,7 @@ const words = [
 export const Skills = () => {
     return (
         <div className="min-h-svh flex justify-center items-center">
-            <h4 className="text-3xl overflow-hidden text-neutral-100">
+            <h4 className="text-3xl overflow-hidden text-neutral-100 z-50">
                 I create
                 <FlipWords words={words} />
                 web applications.{' '}

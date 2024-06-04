@@ -1,18 +1,10 @@
 import { MotionValue } from 'framer-motion';
 
+import { isLowEndDevice } from '../../utils/device-check';
 import { Aurora } from './aurora';
+import { BasicAurora } from './basic-autora';
 
-const colors = [
-    '#9933ff',
-    '#8a29e6',
-    '#7b20cc',
-    '#6c16b3',
-    '#5d0c99',
-    '#4e027f',
-    '#3f0066',
-    '#30004c',
-    '#200033',
-];
+const AURORA_COLORS = ['#9933ff', '#7f2bcd', '#66259b', '#4c1a69', '#320f37'];
 
 export function AnimatedAuroras({
     scrollYProgress,
@@ -21,14 +13,22 @@ export function AnimatedAuroras({
 }) {
     return (
         <div className="pointer-events-none">
-            {colors.map((color, index) => (
-                <Aurora
-                    key={index}
-                    scrollYProgress={scrollYProgress}
-                    borderColor={color}
-                    size={230 + index * 70}
-                />
-            ))}
+            {isLowEndDevice()
+                ? AURORA_COLORS.map((color, index) => (
+                      <BasicAurora
+                          key={index}
+                          borderColor={color}
+                          size={370 + index * 70}
+                      />
+                  ))
+                : AURORA_COLORS.map((color, index) => (
+                      <Aurora
+                          key={index}
+                          scrollYProgress={scrollYProgress}
+                          borderColor={color}
+                          size={370 + index * 70}
+                      />
+                  ))}
         </div>
     );
 }

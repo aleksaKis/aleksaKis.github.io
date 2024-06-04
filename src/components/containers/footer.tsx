@@ -19,7 +19,7 @@ export const Footer = () => (
                 <li>
                     <a
                         href="mailto:kishaleksa@gmail.com"
-                        className="hover:underline"
+                        className="hover:underline me-4 md:me-6"
                     >
                         Contact
                     </a>
