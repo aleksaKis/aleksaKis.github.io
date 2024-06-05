@@ -90,6 +90,7 @@ const FlipWordsComponent = ({
                 initial={initialAnim}
                 animate={animateAnim}
                 transition={transitionAnim}
+                //@ts-expect-error - seems like a bug in framer-motion types
                 exit={exitAnim}
                 className={cn(
                     'z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100 px-2',

@@ -16,7 +16,6 @@
         "test:watch": "jest --watch"
     },
     "dependencies": {
-        "@million/lint": "^1.0.0-rc.18",
         "@radix-ui/react-separator": "^1.0.3",
         "framer-motion": "^11.1.7",
         "lodash": "^4.17.21",
