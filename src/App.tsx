@@ -1,4 +1,4 @@
-import { useScroll } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
 import { About } from './components/containers/about';
@@ -13,6 +13,8 @@ function App() {
     const mainRef = useRef<HTMLDivElement>(null);
 
     const { scrollYProgress } = useScroll({ container: mainRef });
+
+    const display = useTransform(scrollYProgress, [0, 0.1], ['block', 'none']);
 
     return (
         <main className="overflow-hidden relative">
@@ -31,8 +33,9 @@ function App() {
                         particleColor="#FFFFFF"
                     />
                 </div>
-
-                <AnimatedAuroras scrollYProgress={scrollYProgress} />
+                <motion.div style={{ display }}>
+                    <AnimatedAuroras scrollYProgress={scrollYProgress} />
+                </motion.div>
                 <div className="max-w-[1280px] mx-auto px-6 z-10">
                     <Landing />
                     <About yScroll={scrollYProgress} />
