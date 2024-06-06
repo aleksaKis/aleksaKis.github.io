@@ -1,16 +1,22 @@
 import { MotionValue, motion, useTransform } from 'framer-motion';
 
 export const About = ({ yScroll }: { yScroll: MotionValue<number> }) => {
-    const scale = useTransform(yScroll, [0, 0.3], [0.3, 0.95]);
+    const scale = useTransform(yScroll, [0, 0.5], [0, 1]);
 
     return (
         <div id="about" className="min-h-[300svh] relative flex justify-center">
             <motion.div
+                transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 style={{ scale }}
-                className="bg-gradient-to-r from-purple-500 to-purple-900 border-zinc-100 shadow rounded-full z-10 
-                flex items-center p-3 overflow-hidden w-[90dsw] h-[90svw] max-h-[550px] max-w-[550px] sticky top-1/4 transform"
+                className="border-blue-400 border shadow rounded-full z-10 flex items-center p-3 overflow-hidden backdrop-blur-lg
+                w-[90dsw] h-[90svw] max-h-[550px] max-w-[550px] sticky top-1/4 transform"
             >
-                <p className="mx-auto text-center sm:text-base text-sm p-2 px-10">
+                <p
+                    className="mx-auto text-center sm:text-base text-sm p-2 px-10 bg-gradient-to-r from-blue-100 to-blue-600 bg- bg-clip-text"
+                    style={{ '-webkit-text-fill-color': 'transparent' }}
+                >
                     Hi, I&apos;am a Front-end Engineer with expertise in React,
                     Angular, and JavaScript/TypeScript, that excels in crafting
                     seamless user experiences and robust web solutions.
