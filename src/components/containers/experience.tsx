@@ -9,7 +9,10 @@ import { Header } from '../../common/experience/header';
 
 const WorkExperience = () => {
     return (
-        <div id="experience" className="relative py-2 mt-2 mx-auto pl-7">
+        <div
+            id="experience"
+            className="relative py-2 mt-2 pl-12 pr-6 max-w-[1280px] mx-auto"
+        >
             <h2 className="text-4xl tracking-tight mb-4">Work Experience</h2>
             <ExperienceItem
                 link="https://everseen.com/"

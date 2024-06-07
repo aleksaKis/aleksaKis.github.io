@@ -1,5 +1,5 @@
 export const Footer = () => (
-    <footer className="rounded-lg shadow m-4 z-50">
+    <footer className="rounded-lg shadow m-4 z-50 px-6">
         <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
             <span className="text-xs sm:text-sm sm:text-center text-zinc-300">
                 © 2024 by{' '}

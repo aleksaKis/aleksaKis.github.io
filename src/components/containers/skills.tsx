@@ -13,7 +13,7 @@ const words = [
 export const Skills = () => {
     return (
         <motion.div
-            className="min-h-svh flex justify-center items-center relative"
+            className="min-h-svh flex justify-center items-center relative px-6"
             initial={{ opacity: 0 }}
             transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}
             whileInView={{ opacity: 1 }}

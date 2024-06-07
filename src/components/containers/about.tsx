@@ -3,24 +3,40 @@ import { MotionValue, motion, useTransform } from 'framer-motion';
 import dashboardBackground from '../../assets/dashboard-background.jpg';
 
 export const About = ({ yScroll }: { yScroll: MotionValue<number> }) => {
-    const opacity = useTransform(yScroll, [0, 0.2], [0, 1]);
-    const top = useTransform(yScroll, [0, 0.2], ['10%', '-50%']);
+    const opacity = useTransform(
+        yScroll,
+        [0, 0.1, 0.2, 0.5, 0.7],
+        [0, 0, 1, 0.3, 0],
+    );
+    const top = useTransform(yScroll, [0, 0.2], ['10%', '-30%']);
+    const backgroundColor = useTransform(
+        yScroll,
+        [0, 0.1, 1],
+        ['transparent', 'transparent', '#09090b'],
+    );
 
     const backgroundGradient = useTransform(
         yScroll,
-        [0.2, 0.5, 1],
+        [0, 0.2, 0.4, 0.6, 0.8, 1],
         [
-            'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(48,48,179,1) 0%, rgba(0,212,255,1) 100%)',
-            'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(48,48,179,1) 50%, rgba(0,212,255,1) 100%)',
-            'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(48,48,179,1) 100%, rgba(0,212,255,1) 100%)',
+            'linear-gradient(90deg, #8be8a4 0%, #8be8a4 0%, #55a2e0 100%)',
+            'linear-gradient(90deg, #8be8a4 0%, #8be8a4 20%, #55a2e0 100%)',
+            'linear-gradient(90deg, #498dd1 0%, #8be8a4 40%, #55a2e0 100%)',
+            'linear-gradient(90deg, #2245a3 0%, #8be8a4 60%, #55a2e0 100%)',
+            'linear-gradient(90deg, #183173 0%, #55a2e0 80%, #8be8a4 100%)',
+            'linear-gradient(90deg, #0b2e8a 0%, #55a2e0 100%, #8be8a4 100%)',
         ],
     );
     return (
-        <div id="about" className="min-h-[300svh] relative">
+        <motion.div
+            id="about"
+            className="min-h-[400svh] relative px-6"
+            style={{ backgroundColor }}
+        >
             <motion.div
                 style={{ top }}
                 transition={{ duration: 5, ease: 'linear' }}
-                className="absolute w-[200svw] h-[200svw] bg-black blur-lg flex justify-center rounded-full left-1/2 -translate-x-1/2"
+                className="absolute w-[200svw] h-[200svw] bg-zinc-950 blur-lg flex justify-center rounded-t-full left-1/2 -translate-x-1/2"
             />
             <div className="sticky top-1/2 -translate-y-1/2">
                 {/* <motion.img
@@ -34,7 +50,7 @@ export const About = ({ yScroll }: { yScroll: MotionValue<number> }) => {
                     className="backdrop-blur-lg max-w-[600px] rounded px-2 py-1 mx-auto"
                 >
                     <motion.p
-                        className="mx-auto text-center text-lg font-bold"
+                        className="mx-auto text-center text-xl font-bold"
                         style={{
                             WebkitTextFillColor: 'transparent',
                             backgroundClip: 'text',
@@ -53,6 +69,6 @@ export const About = ({ yScroll }: { yScroll: MotionValue<number> }) => {
                     </motion.p>
                 </motion.div>
             </div>
-        </div>
+        </motion.div>
     );
 };
