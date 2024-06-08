@@ -1,4 +1,7 @@
 export const isLowEndDevice = () => {
+    // navigator is not typed properly in TypeScript
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const navigator = window.navigator as any;
     const userAgent = navigator.userAgent.toLowerCase();
     const hardwareConcurrency = navigator.hardwareConcurrency || 2;
     const deviceMemory = navigator.deviceMemory || 2;
