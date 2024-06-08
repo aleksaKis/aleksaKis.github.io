@@ -4,6 +4,8 @@
 
 #content {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {

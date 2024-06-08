@@ -12,16 +12,25 @@ const words = [
 
 export const Skills = () => {
     return (
-        <div className="min-h-svh flex justify-center items-center">
-            <h4 className="text-3xl overflow-hidden text-neutral-100 z-50">
+        <motion.div
+            className="min-h-[100svh] relative px-6 flex justify-center items-center"
+            initial={{ opacity: 0 }}
+            transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}
+            whileInView={{ opacity: 1 }}
+        >
+            <h4 className="sm:text-3xl text-2xl overflow-hidden text-neutral-100 z-50  px-6">
                 I create
                 <FlipWords words={words} />
                 web applications.{' '}
                 <motion.button
+                    style={{ position: 'absolute' }}
+                    whileInView={{ rotate: 360 }}
+                    transition={{ duration: 2, ease: 'easeIn' }}
                     whileTap={{
-                        scale: 0.9,
-                        rotate: 360,
-                        transition: { duration: 1 },
+                        scale: 0,
+                        rotate: 390,
+                        top: '200px',
+                        right: '30px',
                     }}
                 >
                     🚀
@@ -29,6 +38,6 @@ export const Skills = () => {
                 <br />
                 Making the web a better place, one line of code at a time.
             </h4>
-        </div>
+        </motion.div>
     );
 };

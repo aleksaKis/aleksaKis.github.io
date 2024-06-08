@@ -25,15 +25,20 @@ export const Header = ({
                 </a>
                 <div className="flex-1 flex flex-col">
                     <div className="flex justify-between flex-wrap flex-1 flex-col sm:flex-row items-start">
-                        <h3 className="text-xl tracking-tight">{company}</h3>
+                        <h3 className="text-xl tracking-tight font-bold">
+                            {company}
+                        </h3>
                         <time
                             title="Start date"
                             className="border shadow rounded text-sm px-2 py-1"
                         >
+                            <span>from: </span>
                             {date}
                         </time>
                     </div>
-                    <h3 className="text-xl tracking-tight">{title}</h3>
+                    <h3 className="text-lg tracking-tight font-light">
+                        {title}
+                    </h3>
                 </div>
             </div>
         </div>

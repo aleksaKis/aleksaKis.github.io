@@ -14,16 +14,13 @@ export const BasicAurora = memo(
                 <motion.div
                     animate={{
                         rotate: containerRotation,
-                        display: 'none',
-                        opacity: 0,
                     }}
                     initial={{
-                        opacity: 1,
-                        rotate: containerRotation + MAX_ROTATION,
+                        rotate: containerRotation + MAX_ROTATION / 2,
                     }}
                     transition={{
                         ease: 'linear',
-                        duration: 7,
+                        duration: 5,
                     }}
                     style={{
                         translateX: '-50%',
@@ -32,8 +29,8 @@ export const BasicAurora = memo(
                     className="rounded-full top-1/2 absolute left-1/2 overflow-hidden blur-sm"
                 >
                     <motion.div
-                        animate={{ scale: 1 }}
-                        initial={{ scale: 0 }}
+                        animate={{ scale: 1, opacity: 0.7 }}
+                        initial={{ scale: 0, opacity: 1 }}
                         transition={{
                             duration: 5,
                         }}
