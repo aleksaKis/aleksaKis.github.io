@@ -1,12 +1,10 @@
 import { MotionValue, motion, useTransform } from 'framer-motion';
 
-import dashboardBackground from '../../assets/dashboard-background.jpg';
-
 export const About = ({ yScroll }: { yScroll: MotionValue<number> }) => {
     const opacity = useTransform(
         yScroll,
-        [0, 0.1, 0.2, 0.5, 0.7],
-        [0, 0, 1, 0.3, 0],
+        [0, 0.1, 0.2, 0.5, 0.6],
+        [0, 0, 1, 0.1, 0.001],
     );
     const top = useTransform(yScroll, [0, 0.2], ['10%', '-30%']);
     const backgroundColor = useTransform(
@@ -27,10 +25,11 @@ export const About = ({ yScroll }: { yScroll: MotionValue<number> }) => {
             'linear-gradient(90deg, #0b2e8a 0%, #55a2e0 100%, #8be8a4 100%)',
         ],
     );
+
     return (
         <motion.div
             id="about"
-            className="min-h-[400svh] relative px-6"
+            className="md:min-h-[400svh] min-h-[300svh] relative px-6"
             style={{ backgroundColor }}
         >
             <motion.div
@@ -39,12 +38,6 @@ export const About = ({ yScroll }: { yScroll: MotionValue<number> }) => {
                 className="absolute w-[200svw] h-[200svw] bg-zinc-950 blur-lg flex justify-center rounded-t-full left-1/2 -translate-x-1/2"
             />
             <div className="sticky top-1/2 -translate-y-1/2">
-                {/* <motion.img
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    src={dashboardBackground}
-                    className=" object-contain absolute"
-                /> */}
                 <motion.div
                     style={{ opacity }}
                     className="backdrop-blur-lg max-w-[600px] rounded px-2 py-1 mx-auto"

@@ -13,21 +13,22 @@ const words = [
 export const Skills = () => {
     return (
         <motion.div
-            className="min-h-svh flex justify-center items-center relative px-6"
+            className="min-h-[100svh] relative px-6 flex justify-center items-center"
             initial={{ opacity: 0 }}
             transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}
             whileInView={{ opacity: 1 }}
         >
-            <h4 className="sm:text-3xl text-2xl overflow-hidden text-neutral-100 z-50">
+            <h4 className="sm:text-3xl text-2xl overflow-hidden text-neutral-100 z-50  px-6">
                 I create
                 <FlipWords words={words} />
                 web applications.{' '}
                 <motion.button
                     style={{ position: 'absolute' }}
-                    transition={{ duration: 0.8, ease: 'easeIn' }}
+                    whileInView={{ rotate: 360 }}
+                    transition={{ duration: 2, ease: 'easeIn' }}
                     whileTap={{
                         scale: 0,
-                        rotate: 30,
+                        rotate: 390,
                         top: '200px',
                         right: '30px',
                     }}

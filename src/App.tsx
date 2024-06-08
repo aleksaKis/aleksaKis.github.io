@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
 import { About } from './components/containers/about';
+import { Dashboard } from './components/containers/dashboard';
 import { Experience } from './components/containers/experience';
 import { Footer } from './components/containers/footer';
 import { Landing } from './components/containers/landing';
@@ -40,6 +41,7 @@ function App() {
                     <Landing />
                     <About yScroll={scrollYProgress} />
                     <hr />
+                    <Dashboard />
                     <Skills />
                     <Experience />
                     <Footer />
