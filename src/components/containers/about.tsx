@@ -29,7 +29,7 @@ export const About = ({ yScroll }: { yScroll: MotionValue<number> }) => {
     return (
         <motion.div
             id="about"
-            className="md:min-h-[400svh] min-h-[300svh] relative px-6"
+            className="md:min-h-[300svh] min-h-[200svh] relative px-6"
             style={{ backgroundColor }}
         >
             <motion.div

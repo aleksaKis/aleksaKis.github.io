@@ -6,7 +6,7 @@ import { Dashboard } from './components/containers/dashboard';
 import { Experience } from './components/containers/experience';
 import { Footer } from './components/containers/footer';
 import { Landing } from './components/containers/landing';
-import { Skills } from './components/containers/skills';
+import { Phrase } from './components/containers/phrase';
 import { AnimatedAuroras } from './components/ui/animated-auroras';
 import { SparklesCore } from './components/ui/sarkles';
 
@@ -42,7 +42,7 @@ function App() {
                     <About yScroll={scrollYProgress} />
                     <hr />
                     <Dashboard />
-                    <Skills />
+                    <Phrase />
                     <Experience />
                     <Footer />
                 </div>

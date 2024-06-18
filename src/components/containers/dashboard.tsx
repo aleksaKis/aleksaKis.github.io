@@ -1,31 +1,22 @@
-import dashboardImage from '../../assets/dashboard.jpg';
-import { ContainerScroll } from '../ui/container-scroll-animation';
+import skillsVideo from '../../assets/skills_video.mp4';
+import { TabletContainer } from '../ui/tablet-container';
 
 export const Dashboard = () => {
     return (
-        <div className="flex flex-col md:max-h-[1000px] max-h-[570px] overflow-hidden">
-            <ContainerScroll
-                titleComponent={
-                    <>
-                        <h5 className="md:text-4xl text-2xl font-semibold text-black dark:text-white">
-                            Building Innovative Solutions for
-                            <br />
-                            <span className="text-2xl md:text-[8rem] font-bold mt-1 leading-none">
-                                Digital World
-                            </span>
-                        </h5>
-                    </>
-                }
-            >
-                <img
-                    src={dashboardImage}
-                    alt="hero"
-                    height={720}
-                    width={1400}
-                    className="mx-auto rounded-2xl object-cover h-full object-left-top"
-                    draggable={false}
-                />
-            </ContainerScroll>
+        <div className="flex flex-col overflow-hidden">
+            <TabletContainer>
+                <div className="mx-auto rounded-2xl object-cover h-full object-left-top flex justify-center flex-col">
+                    <video
+                        autoPlay={true}
+                        playsInline={true}
+                        muted={true}
+                        className="w-full h-full object-cover rounded-3xl"
+                        src={skillsVideo}
+                    >
+                        <source src={skillsVideo} type="video/mp4" />
+                    </video>
+                </div>
+            </TabletContainer>
         </div>
     );
 };
