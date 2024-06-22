@@ -28,7 +28,7 @@ export const Phrase = () => {
             transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}
             whileInView={{ opacity: 1 }}
         >
-            <h4 className="sm:text-3xl text-2xl overflow-hidden text-neutral-100 z-50 px-6 select-none">
+            <h4 className="sm:text-2xl text-xl overflow-hidden text-neutral-100 z-50 px-6 select-none">
                 I create
                 <FlipWords words={words} />
                 web applications.{' '}
