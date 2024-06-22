@@ -40,7 +40,7 @@ export const AnimatedTooltip = ({
 
     return (
         <div
-            className="-mr-4  relative group"
+            className="-mr-4 relative group"
             key={name}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}

@@ -11,9 +11,9 @@ const WorkExperience = () => {
     return (
         <div
             id="experience"
-            className="relative py-2 mt-2 pl-12 pr-6 max-w-[1280px] mx-auto"
+            className="relative py-2 mt-2 pl-12 pr-6 max-w-[800px] mx-auto"
         >
-            <h2 className="text-4xl tracking-tight mb-4">Work Experience</h2>
+            <h2 className="text-4xl tracking-tight mb-4">Experience</h2>
             <ExperienceItem
                 link="https://everseen.com/"
                 alt="everseen-logo"
@@ -23,7 +23,7 @@ const WorkExperience = () => {
                 endDate="Present"
                 startDate="Jan 2021"
             >
-                <p className="text-sm">
+                <p className="text-xs mt-2">
                     - Design, build, and maintenance of the vision annotation
                     platform with multiple front-end projects using the latest
                     development practices in modern JavaScript/TypeScript
@@ -59,7 +59,7 @@ const WorkExperience = () => {
                 endDate="Dec 2023"
                 startDate="May 2023"
             >
-                <p className="text-sm">
+                <p className="text-xs mt-2">
                     - Contributed to developing of the Admin Dashboard mobile
                     application for monitoring and tracking items and employee
                     management utilizing React Native and Expo framework.
@@ -76,13 +76,13 @@ const WorkExperience = () => {
                 alt="propeler-logo"
                 logoUrl={propelerLogo}
                 title="Web Developer, Internship"
-                company="Propeler Centar"
+                company="Properer Center"
                 endDate="Jan 2021"
                 startDate="Oct 2020"
             >
-                <p className="text-sm">
-                    -Designed, published, and deployed WordPress websites with a
-                    focus on user-friendly interfaces and seamless
+                <p className="text-xs mt-2">
+                    - Designed, published, and deployed WordPress websites with
+                    a focus on user-friendly interfaces and seamless
                     functionality.
                     <br />- Communicated with clients, content writers, and
                     designers.
@@ -98,7 +98,7 @@ const WorkExperience = () => {
                 endDate="Jul 2020"
                 startDate="Oct 2019"
             >
-                <p className="text-sm">
+                <p className="text-xs mt-2">
                     - Assistant of the front-end development course for people
                     with disabilities at Belgrade Faculty of Organizational
                     Sciences. The course subject was web development with React
@@ -142,11 +142,11 @@ const ExperienceItem = ({
             onClick={() => setShow(!show)}
         >
             <div className="text-end absolute right-full text-zinc-300">
-                <span className="text-xs">{endDate}</span>
+                <span className="text-2xs whitespace-nowrap">{endDate}</span>
             </div>
             <div className="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200">
                 <div className="relative z-10 size-7 flex justify-center items-center">
-                    <div className="size-2 rounded-full bg-zinc-300"></div>
+                    <div className="size-2 rounded-full bg-zinc-300" />
                 </div>
             </div>
 

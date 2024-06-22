@@ -3,10 +3,11 @@ import { TabletContainer } from '../ui/tablet-container';
 
 export const Dashboard = () => {
     return (
-        <div className="flex flex-col overflow-hidden">
+        <div className="flex justify-center flex-col overflow-hidden relative h-screen">
             <TabletContainer>
-                <div className="mx-auto rounded-2xl object-cover h-full object-left-top flex justify-center flex-col">
+                <div className="rounded-xl object-cover h-full object-left-top flex-col">
                     <video
+                        loop
                         autoPlay={true}
                         playsInline={true}
                         muted={true}

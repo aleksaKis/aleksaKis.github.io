@@ -22,7 +22,7 @@ function App() {
             <div
                 id="content"
                 ref={mainRef}
-                className="bg-stone-950 text-neutral-300 h-screen w-screen overflow-x-hidden overflow-y-auto"
+                className="bg-stone-950 text-neutral-300 h-[100dvh] w-screen overflow-x-hidden overflow-y-auto"
             >
                 <div className="top-0 w-full absolute inset-0 h-screen pointer-events-none">
                     <SparklesCore
@@ -40,10 +40,9 @@ function App() {
                 <div className="mx-auto z-10">
                     <Landing />
                     <About yScroll={scrollYProgress} />
-                    <hr />
-                    <Dashboard />
                     <Phrase />
                     <Experience />
+                    <Dashboard />
                     <Footer />
                 </div>
             </div>

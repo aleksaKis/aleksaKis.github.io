@@ -30,13 +30,13 @@ export const Header = ({
                         </h3>
                         <time
                             title="Start date"
-                            className="border shadow rounded text-sm px-2 py-1"
+                            className="border shadow rounded text-2xs px-1 py-0.5"
                         >
                             <span>from: </span>
                             {date}
                         </time>
                     </div>
-                    <h3 className="text-lg tracking-tight font-light">
+                    <h3 className="text-base tracking-tight font-light">
                         {title}
                     </h3>
                 </div>

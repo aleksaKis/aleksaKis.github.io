@@ -29,13 +29,13 @@ export const About = ({ yScroll }: { yScroll: MotionValue<number> }) => {
     return (
         <motion.div
             id="about"
-            className="md:min-h-[300svh] min-h-[200svh] relative px-6"
+            className="md:min-h-[300dvh] min-h-[200dvh] relative px-6"
             style={{ backgroundColor }}
         >
             <motion.div
                 style={{ top }}
                 transition={{ duration: 5, ease: 'linear' }}
-                className="absolute w-[200svw] h-[200svw] bg-zinc-950 blur-lg flex justify-center rounded-t-full left-1/2 -translate-x-1/2"
+                className="absolute w-[200dvw] h-[200dvh] bg-zinc-950 blur-lg flex justify-center rounded-t-full left-1/2 -translate-x-1/2"
             />
             <div className="sticky top-1/2 -translate-y-1/2">
                 <motion.div
@@ -43,22 +43,21 @@ export const About = ({ yScroll }: { yScroll: MotionValue<number> }) => {
                     className="backdrop-blur-lg max-w-[600px] rounded px-2 py-1 mx-auto"
                 >
                     <motion.p
-                        className="mx-auto text-center text-xl font-bold"
+                        className="mx-auto text-center text-lg font-bold"
                         style={{
                             WebkitTextFillColor: 'transparent',
                             backgroundClip: 'text',
                             backgroundImage: backgroundGradient,
                         }}
                     >
-                        Hi, I&apos;am a Front-end Engineer with expertise in
-                        React, Angular, and JavaScript/TypeScript, that excels
-                        in crafting seamless user experiences and robust web
-                        solutions. Experienced with UI/UX design, backend
-                        development, and DevOps practices. Dedicated to
-                        user-centric design and mentorship. Committed to
-                        innovation and continuous learning. Poised to drive
-                        positive change in the ever-evolving landscape of web
-                        development.
+                        Hi, I&apos;am a Front-end developer with expertise in
+                        React, Angular, and JavaScript, that excels in crafting
+                        seamless user experiences and robust web solutions.
+                        Experienced with UI/UX design, backend development, and
+                        DevOps practices. Dedicated to user-centric design and
+                        mentorship. Committed to innovation and continuous
+                        learning. Poised to drive positive change in the
+                        ever-evolving landscape of web development.
                     </motion.p>
                 </motion.div>
             </div>
