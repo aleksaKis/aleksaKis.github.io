@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 
 import promo from '../../assets/aleksa_kis_promo.mp4';
 import { PlayIcon } from '../icons/play';
-import { TabletContainer } from '../ui/tablet-container';
+import { ContainerScroll } from '../ui/tablet-container';
 
 export const Dashboard = () => {
     const [showPlayButton, setShowPlayButton] = useState(true);
@@ -22,9 +22,9 @@ export const Dashboard = () => {
     };
 
     return (
-        <div className="flex justify-center flex-col overflow-hidden relative py-10">
-            <TabletContainer>
-                <div className="rounded-xl object-cover h-full object-left-top flex-col relative">
+        <div className="flex justify-center flex-col max-h-screen overflow-hidden relative py-10">
+            <ContainerScroll>
+                <div className="rounded-xl object-cover h-full object-left-top relative">
                     {showPlayButton && (
                         <button
                             onClick={handlePlay}
@@ -62,12 +62,12 @@ export const Dashboard = () => {
                         ref={ref}
                         playsInline={true}
                         muted={true}
-                        className="w-full h-full object-cover rounded-3xl"
+                        className="w-full h-full object-fit rounded-3xl"
                     >
                         <source src={promo} type="video/mp4" />
                     </video>
                 </div>
-            </TabletContainer>
+            </ContainerScroll>
         </div>
     );
 };

@@ -37,14 +37,12 @@ function App() {
                 <motion.div style={{ display }}>
                     <AnimatedAuroras scrollYProgress={scrollYProgress} />
                 </motion.div>
-                <div className="mx-auto z-10">
-                    <Landing />
-                    <About yScroll={scrollYProgress} />
-                    <Phrase />
-                    <Experience />
-                    <Dashboard />
-                    <Footer />
-                </div>
+                <Landing />
+                <About yScroll={scrollYProgress} />
+                <Phrase />
+                <Experience />
+                <Dashboard />
+                <Footer />
             </div>
         </main>
     );
