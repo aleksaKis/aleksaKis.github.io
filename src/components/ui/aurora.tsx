@@ -11,7 +11,7 @@ export const Aurora = memo(
         borderColor,
     }: {
         scrollYProgress: MotionValue<number>;
-        size: number;
+        size: string;
         borderColor: string;
     }) => {
         const stiffness = useMemo(() => random(100, 200), []);
@@ -32,7 +32,7 @@ export const Aurora = memo(
             <div className="max-h-screen max-w-screen h-screen w-screen fixed overflow-hidden">
                 <motion.div
                     animate={{ rotate: containerRotation }}
-                    initial={{ rotate: containerRotation + MAX_ROTATION }}
+                    initial={{ rotate: containerRotation - MAX_ROTATION }}
                     transition={{
                         repeatType: 'loop',
                         ease: 'linear',
@@ -57,8 +57,8 @@ export const Aurora = memo(
                         style={{
                             borderWidth: useMemo(() => random(10, 20), []),
                             borderColor: borderColor,
-                            width: `${size}px`,
-                            height: `${size}px`,
+                            width: size,
+                            height: size,
                             rotate,
                         }}
                     />

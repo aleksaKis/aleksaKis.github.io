@@ -29,7 +29,7 @@ function App() {
                         background="transparent"
                         minSize={0.3}
                         maxSize={2}
-                        particleDensity={10}
+                        particleDensity={5}
                         className="w-full h-full"
                         particleColor="#FFFFFF"
                     />

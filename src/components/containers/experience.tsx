@@ -72,7 +72,7 @@ const WorkExperience = () => {
                 </p>
             </ExperienceItem>
             <ExperienceItem
-                link="https://everseen.com/"
+                link="https://propeler.io/"
                 alt="propeler-logo"
                 logoUrl={propelerLogo}
                 title="Web Developer, Internship"
@@ -90,7 +90,7 @@ const WorkExperience = () => {
                 </p>
             </ExperienceItem>
             <ExperienceItem
-                link="https://everseen.com/"
+                link="https://fmi.rs/en/home/"
                 alt="propeler-logo"
                 logoUrl={fmiLogo}
                 company="Youth with disabilities forum - ”IT Prekvalifikacija”"

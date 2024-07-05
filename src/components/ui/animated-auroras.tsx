@@ -26,7 +26,7 @@ export function AnimatedAuroras({
                           key={index}
                           scrollYProgress={scrollYProgress}
                           borderColor={color}
-                          size={370 + index * 70}
+                          size={`${40 + index * 6}dvh`}
                       />
                   ))}
         </div>
