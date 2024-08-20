@@ -26,7 +26,7 @@ export const Aurora = memo(
         const rotate = useTransform(scrollYProgress, [0, 0.3], [0, 100], {
             clamp: true,
         });
-        const containerRotation = useMemo(() => random(0, MAX_ROTATION), []);
+        const containerRotation = 0;
 
         return (
             <div className="max-h-screen max-w-screen h-screen w-screen fixed overflow-hidden">
@@ -52,7 +52,7 @@ export const Aurora = memo(
                         animate={{ scale: 1, opacity: 0.8 }}
                         initial={{ scale: 0, opacity: 1 }}
                         transition={{
-                            duration: useMemo(() => random(2, 5), []),
+                            duration: 3,
                         }}
                         style={{
                             borderWidth: useMemo(() => random(10, 20), []),

@@ -22,7 +22,7 @@ function App() {
             <div
                 id="content"
                 ref={mainRef}
-                className="bg-stone-950 text-neutral-300 h-[100dvh] w-screen overflow-x-hidden overflow-y-auto"
+                className="bg-neutral-950 text-neutral-300 h-[100dvh] w-screen overflow-x-hidden overflow-y-auto"
             >
                 <div className="top-0 w-full absolute inset-0 h-screen pointer-events-none">
                     <SparklesCore

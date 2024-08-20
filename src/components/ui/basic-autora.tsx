@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 import random from 'lodash/random';
 import { memo, useMemo } from 'react';
 
-const MAX_ROTATION = 360;
+const MAX_ROTATION = 200;
 
 // Optimized version of the aurora component for low-end devices
 export const BasicAurora = memo(
     ({ size, borderColor }: { size: number; borderColor: string }) => {
-        const containerRotation = useMemo(() => random(0, MAX_ROTATION), []);
+        const containerRotation = 0;
 
         return (
             <div className="max-h-screen max-w-screen h-screen w-screen fixed overflow-hidden">

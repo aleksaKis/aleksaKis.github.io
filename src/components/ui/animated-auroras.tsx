@@ -4,7 +4,7 @@ import { isLowEndDevice } from '../../utils/device-check';
 import { Aurora } from './aurora';
 import { BasicAurora } from './basic-autora';
 
-const AURORA_COLORS = ['#9933ff', '#7f2bcd', '#66259b', '#4c1a69', '#320f37'];
+const AURORA_COLORS = ['#260733', '#2E073F', '#7A1CAC', '#9243bd', '#a563c8'];
 
 export function AnimatedAuroras({
     scrollYProgress,
@@ -26,7 +26,7 @@ export function AnimatedAuroras({
                           key={index}
                           scrollYProgress={scrollYProgress}
                           borderColor={color}
-                          size={`${40 + index * 6}dvh`}
+                          size={`${30 + index * 6}dvh`}
                       />
                   ))}
         </div>

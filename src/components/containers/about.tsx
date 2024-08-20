@@ -1,11 +1,7 @@
 import { MotionValue, motion, useTransform } from 'framer-motion';
 
 export const About = ({ yScroll }: { yScroll: MotionValue<number> }) => {
-    const opacity = useTransform(
-        yScroll,
-        [0, 0.1, 0.2, 0.5, 0.6],
-        [0, 0, 1, 0.1, 0.001],
-    );
+    const opacity = useTransform(yScroll, [0, 0.1, 0.2, 0.5], [0, 0, 1, 0]);
     const top = useTransform(yScroll, [0, 0.2], ['10%', '-30%']);
     const backgroundColor = useTransform(
         yScroll,

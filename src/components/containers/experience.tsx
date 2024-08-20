@@ -51,7 +51,7 @@ const WorkExperience = () => {
                 </p>
             </ExperienceItem>
             <ExperienceItem
-                link="/"
+                link="https://init-d.io/"
                 alt="initd-logo"
                 logoUrl={initDLogo}
                 company="Init.d"
