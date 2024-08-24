@@ -8,6 +8,9 @@ export default {
                 '2xs': '.625rem',
                 '3xs': '.5rem',
             },
+            fontFamily: {
+                header: ['Montserrat', 'sans-serif'],
+            },
         },
     },
     plugins: [],

@@ -18,7 +18,7 @@ export const Phrase = () => {
             scale: 0,
             rotate: 40,
             top: '200px',
-            right: '30px',
+            right: '300px',
         });
     };
     return (
@@ -28,7 +28,7 @@ export const Phrase = () => {
             transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}
             whileInView={{ opacity: 1 }}
         >
-            <h4 className="sm:text-2xl text-xl overflow-hidden text-neutral-100 z-50 px-6 select-none">
+            <h3 className="sm:text-2xl text-xl overflow-hidden text-neutral-100 z-50 px-6 select-none font-header">
                 I create
                 <FlipWords words={words} />
                 web applications.{' '}
@@ -47,7 +47,7 @@ export const Phrase = () => {
                 </motion.button>{' '}
                 <br />
                 Making the web a better place, one line of code at a time.
-            </h4>
+            </h3>
         </motion.div>
     );
 };

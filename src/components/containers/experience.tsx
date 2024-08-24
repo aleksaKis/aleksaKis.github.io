@@ -6,6 +6,7 @@ import fmiLogo from '../../assets/fmi_logo.jpg';
 import initDLogo from '../../assets/initd_logo.jpg';
 import propelerLogo from '../../assets/propeler_logo.jpg';
 import { Header } from '../../common/experience/header';
+import { LaptopIcon } from '../icons/laptop';
 
 const WorkExperience = () => {
     return (
@@ -13,7 +14,10 @@ const WorkExperience = () => {
             id="experience"
             className="relative py-2 mt-2 pl-12 pr-6 max-w-[800px] mx-auto"
         >
-            <h2 className="text-4xl tracking-tight mb-4">Experience</h2>
+            <h2 className="text-4xl tracking-tight mb-4 font-header flex">
+                <LaptopIcon className="inline mr-2" fill="#f5f5f5" width={40} />
+                Experience
+            </h2>
             <ExperienceItem
                 link="https://everseen.com/"
                 alt="everseen-logo"
@@ -23,7 +27,7 @@ const WorkExperience = () => {
                 endDate="Present"
                 startDate="Jan 2021"
             >
-                <p className="text-xs mt-2">
+                <p className="text- mt-2">
                     - Design, build, and maintenance of the vision annotation
                     platform with multiple front-end projects using the latest
                     development practices in modern JavaScript/TypeScript
@@ -59,7 +63,7 @@ const WorkExperience = () => {
                 endDate="Dec 2023"
                 startDate="May 2023"
             >
-                <p className="text-xs mt-2">
+                <p className="text- mt-2">
                     - Contributed to developing of the Admin Dashboard mobile
                     application for monitoring and tracking items and employee
                     management utilizing React Native and Expo framework.
@@ -80,7 +84,7 @@ const WorkExperience = () => {
                 endDate="Jan 2021"
                 startDate="Oct 2020"
             >
-                <p className="text-xs mt-2">
+                <p className="text- mt-2">
                     - Designed, published, and deployed WordPress websites with
                     a focus on user-friendly interfaces and seamless
                     functionality.
@@ -98,7 +102,7 @@ const WorkExperience = () => {
                 endDate="Jul 2020"
                 startDate="Oct 2019"
             >
-                <p className="text-xs mt-2">
+                <p className="text- mt-2">
                     - Assistant of the front-end development course for people
                     with disabilities at Belgrade Faculty of Organizational
                     Sciences. The course subject was web development with React

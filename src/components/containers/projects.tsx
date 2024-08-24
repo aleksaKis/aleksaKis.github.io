@@ -1,14 +1,23 @@
+import { AppWindowIcon } from '../icons/app-window';
+
 export const Projects = () => {
     return (
         <div
-            className="relative py-2 pt-10 pl-12 pr-6 max-w-[800px] mx-auto mt-2"
+            className="relative py-2 pt-10 pl-12 pr-6 max-w-[800px] mx-auto mt-24"
             id="projects"
         >
-            <h2 className="text-4xl mb-4">Free time projects</h2>
+            <h2 className="text-4xl mb-4 font-header flex">
+                <AppWindowIcon
+                    className="inline mr-2"
+                    fill="#f5f5f5"
+                    width={40}
+                />
+                Free Time Projects
+            </h2>
             <div className="flex gap-2 flex-col">
                 <div className="flex flex-1 flex-col">
                     <a href="https://github.com/aleksaKis/aleksaKis.github.io">
-                        <h3 className="text-xl underline hover:text-stone-100 mb-1 transition">
+                        <h3 className="text-xl underline hover:text-neutral-100 mb-1 transition">
                             aleksa-kis (You are here)
                         </h3>
                     </a>
@@ -23,7 +32,7 @@ export const Projects = () => {
                 </div>
                 <div>
                     <a href="https://github.com/aleksaKis/rand-melody">
-                        <h3 className="text-xl underline hover:text-stone-100 mb-1 transition">
+                        <h3 className="text-xl underline hover:text-neutral-100 mb-1 transition">
                             rand-melody-generator
                         </h3>
                     </a>
@@ -36,7 +45,7 @@ export const Projects = () => {
                 </div>
                 <div>
                     <a href="https://github.com/aleksaKis/beptune">
-                        <h3 className="text-xl underline hover:text-stone-100 mb-1 transition">
+                        <h3 className="text-xl underline hover:text-neutral-100 mb-1 transition">
                             beeptune
                         </h3>
                     </a>
@@ -50,7 +59,7 @@ export const Projects = () => {
                 </div>
                 <div>
                     <a href="https://github.com/aleksaKis/chat-app">
-                        <h3 className="text-xl underline hover:text-stone-100 mb-1 transition">
+                        <h3 className="text-xl underline hover:text-neutral-100 mb-1 transition">
                             chat-app
                         </h3>
                     </a>
@@ -63,7 +72,7 @@ export const Projects = () => {
                 </div>
                 <div>
                     <a href="https://github.com/aleksaKis/heart-disease-classification">
-                        <h3 className="text-xl underline hover:text-stone-100 mb-1 transition">
+                        <h3 className="text-xl underline hover:text-neutral-100 mb-1 transition">
                             heart-disease-classification
                         </h3>
                     </a>
@@ -79,7 +88,7 @@ export const Projects = () => {
                 </div>
                 <div>
                     <a href="https://github.com/aleksaKis/sudoku-solver">
-                        <h3 className="text-xl underline hover:text-stone-100 mb-1 transition">
+                        <h3 className="text-xl underline hover:text-neutral-100 mb-1 transition">
                             sudoku-solver
                         </h3>
                     </a>
@@ -92,7 +101,7 @@ export const Projects = () => {
                 </div>
                 <div>
                     <a href="https://github.com/aleksaKis/data-visualization">
-                        <h3 className="text-xl underline hover:text-stone-100 mb-1 transition">
+                        <h3 className="text-xl underline hover:text-neutral-100 mb-1 transition">
                             data-visualization
                         </h3>
                     </a>
