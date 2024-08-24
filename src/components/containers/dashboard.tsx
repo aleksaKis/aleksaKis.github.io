@@ -24,7 +24,7 @@ export const Dashboard = () => {
     };
 
     return (
-        <div className="flex justify-center flex-col max-h-[80dvh] overflow-hidden relative py-10">
+        <div className="flex justify-center flex-col max-h-[80dvh] overflow-hidden relative py-5 mt-2">
             <ContainerScroll>
                 <div className="rounded-xl object-cover h-full object-left-top relative">
                     {showPlayButton && (

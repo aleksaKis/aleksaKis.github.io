@@ -1,4 +1,4 @@
-import { MotionValue, motion, useSpring, useTransform } from 'framer-motion';
+import { MotionValue, motion, useTransform } from 'framer-motion';
 import random from 'lodash/random';
 import { memo, useMemo } from 'react';
 
@@ -14,14 +14,9 @@ export const Aurora = memo(
         size: string;
         borderColor: string;
     }) => {
-        const stiffness = useMemo(() => random(100, 200), []);
-
-        const scale = useTransform(
-            useSpring(scrollYProgress, { damping: 50, stiffness }),
-            [0, 0.3],
-            [1, 1.5],
-            { clamp: true },
-        );
+        const scale = useTransform(scrollYProgress, [0, 0.3], [1, 5], {
+            clamp: true,
+        });
 
         const rotate = useTransform(scrollYProgress, [0, 0.3], [0, 100], {
             clamp: true,
