@@ -6,9 +6,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:react/recommended',
         'plugin:react-hooks/recommended',
-        'plugin:jest-dom/recommended',
         'plugin:prettier/recommended',
-        'plugin:testing-library/react',
     ],
     ignorePatterns: [
         'dist',
