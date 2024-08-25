@@ -18,7 +18,7 @@ export const Phrase = () => {
             scale: 0,
             rotate: 40,
             top: '200px',
-            right: '300px',
+            right: '-100px',
         });
     };
     return (

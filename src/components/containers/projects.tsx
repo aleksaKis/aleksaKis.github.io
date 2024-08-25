@@ -1,3 +1,4 @@
+import youAreHere from '../../assets/you-are-here.png';
 import { AppWindowIcon } from '../icons/app-window';
 
 export const Projects = () => {
@@ -12,13 +13,18 @@ export const Projects = () => {
                     fill="#f5f5f5"
                     width={40}
                 />
-                Free Time Projects
+                Projects
             </h2>
             <div className="flex gap-2 flex-col">
                 <div className="flex flex-1 flex-col">
+                    <img
+                        className="w-28 absolute lg:-translate-x-full translate-x-full px-2"
+                        src={youAreHere}
+                        alt="you are here"
+                    />
                     <a href="https://github.com/aleksaKis/aleksaKis.github.io">
                         <h3 className="text-xl underline hover:text-neutral-100 mb-1 transition">
-                            aleksa-kis (You are here)
+                            aleksa-kis
                         </h3>
                     </a>
                     <p className="flex text-xs">
