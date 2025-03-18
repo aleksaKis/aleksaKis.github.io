@@ -16,6 +16,7 @@
         "@radix-ui/react-separator": "^1.0.3",
         "framer-motion": "^11.1.7",
         "lodash": "^4.17.21",
+        "posthog-js": "^1.231.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-social-icons": "^6.16.0",
