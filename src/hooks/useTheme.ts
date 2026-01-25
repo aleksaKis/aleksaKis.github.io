@@ -6,9 +6,7 @@ export const useTheme = () => {
         document.documentElement.classList.add('dark');
 
         // Update meta theme-color
-        const metaThemeColor = document.querySelector(
-            'meta[name="theme-color"]',
-        );
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
         if (metaThemeColor) {
             metaThemeColor.setAttribute('content', '#000000');
         }

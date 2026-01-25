@@ -20,10 +20,7 @@ export const SEO = ({
             {/* Basic Meta Tags */}
             <title>{title}</title>
             <meta name="description" content={description} />
-            <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1"
-            />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta charSet="utf-8" />
 
             {/* Open Graph Meta Tags */}

@@ -146,6 +146,7 @@ export const Projects = () => {
         <div className="flex flex-wrap justify-center gap-2 mb-10">
           {categories.map((category) => (
             <button
+              type="button"
               key={category}
               onClick={() => setActiveFilter(category)}
               className={`px-3 py-1.5 text-sm font-medium transition-colors duration-150 ${

@@ -15,7 +15,4 @@ const LetterCore = ({ letter, index }: { letter: string; index: number }) => (
     </motion.span>
 );
 
-export const Letter = memo(
-    LetterCore,
-    (prev, next) => prev.letter === next.letter,
-);
+export const Letter = memo(LetterCore, (prev, next) => prev.letter === next.letter);

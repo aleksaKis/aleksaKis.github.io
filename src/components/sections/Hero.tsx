@@ -55,7 +55,11 @@ export const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
-          <button onClick={scrollToProjects} className="btn btn-primary">
+          <button
+            type="button"
+            onClick={scrollToProjects}
+            className="btn btn-primary"
+          >
             View Projects
           </button>
           <a href="mailto:kishaleksa@gmail.com" className="btn btn-secondary">

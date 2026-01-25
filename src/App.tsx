@@ -49,6 +49,7 @@ function App() {
       {/* Scroll to Top Button */}
       {showScrollTop && (
         <button
+          type="button"
           onClick={scrollToTop}
           className="fixed bottom-6 right-6 p-3 bg-card border border-border text-muted-foreground hover:text-foreground hover:border-muted-foreground/50 transition-colors z-50"
           aria-label="Scroll to top"
