@@ -1,0 +1,229 @@
+/* Fonts loaded via index.html with preconnect for better performance */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Professional Monochrome Color System */
+    --background: 220 16% 4%;
+    --foreground: 220 13% 91%;
+
+    /* Primary - Subtle neutral accent */
+    --primary: 220 13% 69%;
+    --primary-foreground: 220 16% 4%;
+
+    /* Secondary */
+    --secondary: 220 13% 20%;
+    --secondary-foreground: 220 13% 91%;
+
+    /* Accent - Very subtle */
+    --accent: 220 13% 26%;
+    --accent-foreground: 220 13% 91%;
+
+    /* Surface Colors */
+    --card: 220 16% 7%;
+    --card-foreground: 220 13% 91%;
+    --muted: 220 13% 14%;
+    --muted-foreground: 220 13% 55%;
+
+    /* UI Colors */
+    --border: 220 13% 14%;
+    --input: 220 13% 14%;
+    --ring: 220 13% 69%;
+
+    /* Radius */
+    --radius: 0.125rem;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md:
+      0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg:
+      0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family:
+      "Inter",
+      system-ui,
+      -apple-system,
+      sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    line-height: 1.7;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: hsl(var(--foreground));
+  }
+
+  code,
+  pre {
+    font-family: "JetBrains Mono", monospace;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+
+  /* Focus styles */
+  *:focus-visible {
+    @apply outline-none ring-1 ring-primary/50 ring-offset-1 ring-offset-background;
+  }
+
+  /* Selection */
+  ::selection {
+    background: hsl(var(--primary) / 0.2);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  /* Modern Button Styles */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2;
+    @apply px-5 py-2.5 font-medium text-sm;
+    @apply transition-colors duration-150;
+    @apply focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary/50;
+  }
+
+  .btn-primary {
+    @apply bg-foreground text-background;
+    @apply hover:bg-foreground/90;
+  }
+
+  .btn-secondary {
+    @apply bg-muted border border-border text-foreground;
+    @apply hover:bg-muted/80 hover:border-muted-foreground/50;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-muted-foreground;
+    @apply hover:bg-muted hover:text-foreground;
+  }
+
+  /* Modern Card Styles */
+  .card {
+    @apply bg-card border border-border;
+    @apply transition-colors duration-150;
+  }
+
+  .card-hover:hover {
+    @apply border-muted-foreground/50;
+  }
+
+  /* Section Container */
+  .section {
+    @apply py-20 md:py-28;
+  }
+
+  .section-header {
+    @apply mb-12 md:mb-16 text-center;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-semibold mb-3 text-foreground;
+  }
+
+  .section-subtitle {
+    @apply text-base text-muted-foreground max-w-xl mx-auto;
+  }
+
+  /* Container */
+  .container-custom {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Skill Badge */
+  .skill-badge {
+    @apply inline-flex items-center px-3 py-1.5;
+    @apply text-sm font-medium;
+    @apply bg-muted text-muted-foreground;
+    @apply border border-border;
+    @apply transition-colors duration-150;
+    @apply hover:text-foreground hover:border-muted-foreground/50;
+  }
+
+  /* Project Card */
+  .project-card {
+    @apply bg-card border border-border p-5;
+    @apply transition-colors duration-150;
+  }
+
+  .project-card:hover {
+    @apply border-muted-foreground/50;
+  }
+
+  /* Animated Underline */
+  .animated-underline {
+    @apply relative;
+  }
+
+  .animated-underline::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-px;
+    @apply bg-foreground;
+    @apply transition-all duration-200;
+  }
+
+  .animated-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Scroll to top button */
+  .scroll-to-top {
+    @apply fixed bottom-6 right-6 z-50;
+    @apply p-3;
+    @apply bg-muted text-foreground border border-border;
+    @apply transition-colors duration-150;
+    @apply hover:bg-muted/80 hover:border-muted-foreground/50;
+  }
+}
+
+@layer utilities {
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+}
