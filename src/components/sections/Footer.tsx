@@ -22,14 +22,14 @@ export const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="py-8 border-t border-border">
+        <footer className="py-6 border-t border-border">
             <div className="container-custom">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                    <p className="text-sm text-muted-foreground">
-                        © {currentYear} Aleksa Kis. All rights reserved.
+                    <p className="text-xs text-muted-foreground tracking-wide">
+                        © {currentYear} Aleksa Kis
                     </p>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3">
                         {socialLinks.map((link) => (
                             <a
                                 key={link.name}
@@ -39,7 +39,7 @@ export const Footer = () => {
                                 aria-label={link.name}
                                 className="text-muted-foreground hover:text-foreground transition-colors"
                             >
-                                <link.icon size={18} />
+                                <link.icon size={14} strokeWidth={1.5} />
                             </a>
                         ))}
                     </div>

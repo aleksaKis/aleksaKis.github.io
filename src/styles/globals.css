@@ -33,8 +33,8 @@
         --input: 220 13% 14%;
         --ring: 220 13% 69%;
 
-        /* Radius */
-        --radius: 0.125rem;
+        /* Radius - Sharp edges for precision */
+        --radius: 0;
 
         /* Shadows */
         --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -58,7 +58,8 @@
         @apply bg-background text-foreground;
         font-family: "Inter", system-ui, -apple-system, sans-serif;
         font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-        line-height: 1.7;
+        line-height: 1.6;
+        letter-spacing: -0.01em;
     }
 
     h1,
@@ -67,10 +68,10 @@
     h4,
     h5,
     h6 {
-        font-family: "Inter", system-ui, sans-serif;
+        font-family: "Source Serif 4", Georgia, serif;
         font-weight: 600;
-        letter-spacing: -0.02em;
-        line-height: 1.2;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
         color: hsl(var(--foreground));
     }
 
@@ -111,27 +112,27 @@
 }
 
 @layer components {
-    /* Modern Button Styles */
+    /* Sharp Button Styles - Precision Engineering */
     .btn {
         @apply inline-flex items-center justify-center gap-2;
-        @apply px-5 py-2.5 font-medium text-sm;
-        @apply transition-colors duration-150;
-        @apply focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary/50;
+        @apply px-6 py-2.5 font-medium text-sm tracking-wide;
+        @apply transition-all duration-150;
+        @apply focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-foreground/50;
     }
 
     .btn-primary {
-        @apply bg-foreground text-background;
-        @apply hover:bg-foreground/90;
+        @apply bg-transparent text-foreground border border-foreground;
+        @apply hover:bg-foreground hover:text-background;
     }
 
     .btn-secondary {
-        @apply bg-muted border border-border text-foreground;
-        @apply hover:bg-muted/80 hover:border-muted-foreground/50;
+        @apply bg-transparent border border-muted-foreground/40 text-muted-foreground;
+        @apply hover:border-foreground hover:text-foreground;
     }
 
     .btn-ghost {
-        @apply bg-transparent text-muted-foreground;
-        @apply hover:bg-muted hover:text-foreground;
+        @apply bg-transparent text-muted-foreground border border-transparent;
+        @apply hover:border-border hover:text-foreground;
     }
 
     /* Modern Card Styles */
@@ -144,21 +145,23 @@
         @apply border-muted-foreground/50;
     }
 
-    /* Section Container */
+    /* Section Container - Tight & Precise */
     .section {
-        @apply py-20 md:py-28;
+        @apply py-16 md:py-24;
     }
 
     .section-header {
-        @apply mb-12 md:mb-16 text-center;
+        @apply mb-10 md:mb-14 text-center;
     }
 
     .section-title {
-        @apply text-2xl md:text-3xl font-semibold mb-3 text-foreground;
+        @apply text-2xl md:text-3xl font-semibold mb-2 text-foreground;
+        font-family: "Source Serif 4", Georgia, serif;
+        letter-spacing: -0.03em;
     }
 
     .section-subtitle {
-        @apply text-base text-muted-foreground max-w-xl mx-auto;
+        @apply text-sm text-muted-foreground max-w-xl mx-auto tracking-wide;
     }
 
     /* Container */
@@ -166,24 +169,24 @@
         @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
     }
 
-    /* Skill Badge */
+    /* Skill Badge - Precise & Minimal */
     .skill-badge {
-        @apply inline-flex items-center px-3 py-1.5;
-        @apply text-sm font-medium;
-        @apply bg-muted text-muted-foreground;
+        @apply inline-flex items-center px-2.5 py-1;
+        @apply text-xs font-medium tracking-wide;
+        @apply bg-transparent text-muted-foreground;
         @apply border border-border;
         @apply transition-colors duration-150;
-        @apply hover:text-foreground hover:border-muted-foreground/50;
+        @apply hover:text-foreground hover:border-foreground/50;
     }
 
-    /* Project Card */
+    /* Project Card - Clean & Technical */
     .project-card {
-        @apply bg-card border border-border p-5;
-        @apply transition-colors duration-150;
+        @apply bg-transparent border border-border p-5;
+        @apply transition-all duration-150;
     }
 
     .project-card:hover {
-        @apply border-muted-foreground/50;
+        @apply border-foreground/60;
     }
 
     /* Animated Underline */

@@ -14,13 +14,13 @@ export const Skills = () => {
                     <p className="section-subtitle">Technologies I work with</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
                     {Object.entries(technologies).map(([category, skills]) => (
                         <div key={category}>
-                            <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
+                            <h3 className="text-xs font-medium text-muted-foreground uppercase tracking-widest mb-2">
                                 {category}
                             </h3>
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-1.5">
                                 {skills.map((skill) => (
                                     <span key={skill} className="skill-badge">
                                         {skill}
