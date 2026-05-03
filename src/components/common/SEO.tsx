@@ -9,8 +9,8 @@ interface SEOProps {
 }
 
 export const SEO = ({
-    title = 'Aleksa Kis - Portfolio',
-    description = 'Welcome to my portfolio website showcasing my projects and experience in software development.',
+    title = 'Aleksa Kis - Software Engineer',
+    description = 'Portfolio of Aleksa Kis, a software engineer building scalable full stack web applications with React, TypeScript, Node.js, and modern backend technologies.',
     image = '/og-image.png',
     url = 'https://aleksakis.github.io',
     type = 'website',

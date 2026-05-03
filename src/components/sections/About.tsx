@@ -7,15 +7,16 @@ export const About = () => {
 
                     <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
                         <p>
-                            Frontend Developer with several years of experience building web
-                            applications. Specializing in{' '}
+                            Software Engineer with several years of experience building web
+                            applications across the frontend and backend. Specializing in{' '}
                             <span className="text-foreground">React</span>,{' '}
-                            <span className="text-foreground">TypeScript</span>, and modern CSS
-                            frameworks.
+                            <span className="text-foreground">TypeScript</span>,{' '}
+                            <span className="text-foreground">Node.js</span>, and modern web
+                            platforms.
                         </p>
                         <p>
-                            Focused on writing maintainable, scalable code and creating interfaces
-                            that are both functional and precisely crafted. I believe in attention
+                            Focused on writing maintainable, scalable code and creating systems that
+                            are functional, reliable, and precisely crafted. I believe in attention
                             to detail and systematic problem-solving.
                         </p>
                         <p>

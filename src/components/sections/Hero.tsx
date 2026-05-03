@@ -44,13 +44,13 @@ export const Hero = () => {
 
                 {/* Role */}
                 <p className="text-sm md:text-base text-muted-foreground mb-5 tracking-widest uppercase">
-                    Frontend Developer
+                    Software Engineer
                 </p>
 
                 {/* Description */}
                 <p className="text-sm text-muted-foreground max-w-md mx-auto mb-8 leading-relaxed">
-                    Building scalable web applications with React and TypeScript. Precision in code,
-                    clarity in design.
+                    Building scalable web applications across frontend, backend, and product
+                    systems. Precision in code, clarity in design.
                 </p>
 
                 {/* CTA Buttons */}

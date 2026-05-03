@@ -1,7 +1,7 @@
 {
     "name": "Aleksa Kis - Portfolio",
     "short_name": "Aleksa Kis",
-    "description": "Portfolio website showcasing my projects and experience in software development",
+    "description": "Portfolio website showcasing software engineering projects and full stack experience",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#000000",

@@ -50,6 +50,15 @@ const projects: Project[] = [
         category: 'Full Stack',
     },
     {
+        id: 'system-monitor',
+        title: 'System Monitor',
+        description:
+            'Self-hosted full stack dashboard for monitoring a home server, with authenticated access, live system metrics, Docker deployment, and a React interface.',
+        technologies: ['React', 'Bun', 'TypeScript', 'Docker', 'SQLite'],
+        githubUrl: 'https://github.com/aleksaKis/system-monitor',
+        category: 'Full Stack',
+    },
+    {
         id: 'heart-disease',
         title: 'Heart Disease Classifier',
         description:
